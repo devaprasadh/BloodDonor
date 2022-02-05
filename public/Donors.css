@@ -1,0 +1,114 @@
+* {
+  font-family: "Inter", sans-serif;
+}
+p {
+  text-align: justify;
+  font-size: large;
+}
+li {
+  font-size: large;
+}
+h2,
+h4 {
+  padding: 5px 0;
+  color: rgb(54, 51, 51);
+}
+.navbar {
+  background-image: linear-gradient(rgb(206, 29, 29), rgb(218, 141, 141));
+  border-bottom: 3px solid rgb(255, 255, 255);
+}
+.navbar-brand,
+.nav-link,
+.searc,
+.border {
+  transition: ease-in 0.5s;
+}
+.navbar-brand {
+  border-top: 1px solid transparent;
+}
+.navbar-brand:hover {
+  color: rgb(0, 0, 0) !important;
+}
+
+.nav-link {
+  margin-right: 20px;
+  border-bottom: 2px solid transparent;
+  color: rgb(0, 0, 0) !important;
+}
+
+.nav-link:hover {
+  color: rgb(255, 255, 255) !important;
+  border-bottom: 2px solid black;
+}
+.searc {
+  width: 100%;
+  height: 60px;
+  background-color: rgb(243, 243, 243);
+  background-color: rgb(228, 225, 225);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -2px;
+}
+.searc:hover {
+  color: rgb(241, 59, 59);
+}
+.col-lg-4,
+.col-lg-2 {
+  height: 80px;
+}
+.border {
+  width: 100%;
+  height: 50px;
+  box-shadow: 1px 1px 5px rgb(139, 139, 139), -1px -1px 5px rgb(139, 139, 139);
+  border-radius: 10px;
+  border-bottom: 20px;
+  outline: none;
+}
+.border:focus {
+  box-shadow: 1px 1px 5px rgb(241, 59, 59), -1px -1px 5px rgb(241, 59, 59);
+}
+.button {
+  width: 60%;
+  height: 50px;
+  font-size: larger;
+  font-style: normal;
+  box-shadow: 1px 1px 5px rgb(139, 139, 139), -1px -1px 5px rgb(139, 139, 139);
+  border-radius: 10px;
+  border-bottom: 20px;
+  outline: none;
+  border: 1px solid red;
+  background-color: rgb(255, 170, 170);
+}
+.button:active {
+  box-shadow: 1px 1px 3px rgb(0, 0, 0), -1px -1px 3px rgb(0, 0, 0);
+}
+.card {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(165, 156, 156);
+  transition: 0.6s;
+  box-shadow: 5px 5px 10px rgb(252, 239, 239) inset,
+    -5px -5px 10px rgb(252, 239, 239) inset;
+}
+.card-title {
+  text-align: center;
+  background-color: rgb(252, 116, 116);
+  color: white;
+  border-radius: 50px;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 2px 2px 5px rgb(255, 170, 170), -2px -2px 5px rgb(255, 170, 170);
+}
+#letter {
+  color: rgb(182, 39, 39);
+  font-size: 18px;
+  line-height: 2;
+  font-style: normal;
+  text-decoration: solid;
+}
+span {
+  color: rgb(87, 84, 84);
+  font-size: 17px;
+}

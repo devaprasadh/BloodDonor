@@ -9,11 +9,12 @@ const connectDb = require('./db/connect.js')
 // app.use(express.json());
 app.use(bodyparser.urlencoded({extended:false}));
 app.use(bodyparser.json());
+app.use(express.static('./public'))
 
 
 
 app.get('/', (req,res) => {
-    res.send("home page")
+    res.sendFile(__dirname + '/public/Home.html')
 })
 
 app.use('/donor',donor);

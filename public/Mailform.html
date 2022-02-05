@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<head>
+    <title>BloodDonor</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+
+    <link rel="icon" href="logo1.png" type="icon/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--Jquery-->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Mail.css" type="text/css">
+
+</head>
+
+<body style="margin: 0;padding: 0;">
+    <nav class="navbar navbar-expand-md bg-danger navbar-dark ">
+        <a class="navbar-brand " href="#"> <img src="logo1.png" alt="logo" style="width:40px; border-radius: 50%;">
+            DONATE BLOOD</a>
+        </div>
+    </nav>
+    <div class="container-md">
+        <form id="form1" action="">
+            <h2 id="form-head">Request Donor</h2>
+            <div class="border">
+                <input type="text" id="name1" class="input" name="username" placeholder="Name" required>
+
+            </div>
+            <div class="border">
+                <input type="text" id="mobile" class="input" name="mobile" placeholder="Mobile Number" required>
+
+            </div>
+            <div class="border">
+                <span> <input type="email" id="Emailinput" class="input" name="Email" placeholder="Email" required>
+                    <button id="otpgen" type="button" class="btn btn-primary" disabled>GENERATE OTP</button></span>
+            </div>
+            <div id="otpbox">
+            </div>
+            <div class="border">
+                <textarea id="msg" rows="5" cols="55" name="msg" placeholder="Enter Message" required disabled></textarea>
+                <button id="submit1" type="submit" class="btn btn-primary" disabled>SEND REQUEST</button>
+            </div>
+
+        </form>
+
+    </div>
+</body>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+    integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    const params = window.location.search
+    var messageBox = document.getElementById('msg');
+    var requestButton = document.getElementById('submit1');
+    const emailid = new URLSearchParams(params).get('id')
+    console.log(emailid)
+    var otpgen = document.getElementById("otpgen");
+    var otpbox = document.getElementById("otpbox");
+    document.getElementById("Emailinput").addEventListener("focus", () => {
+        otpgen.disabled = false;
+    })
+
+    
+    otpgen.addEventListener("click", () => {
+        alert(otpgen);
+        otpbox.innerHTML = `<div class="border" >
+    <input type="text" id="otp" class="input" name="otp" placeholder="Enter OTP" required>
+    <button class="btn btn-primary" id="otpButton">VERIFY OTP</button>
+    </div>`
+        var email1 = document.getElementById("Emailinput");
+        var number = Math.ceil(Math.random() * 10000);
+        const number1 = String(number)
+
+        var name1 = document.getElementById("name1");
+        Email.send({
+            Host: "smtp.gmail.com",
+            Username: "jd.donateblood@gmail.com",
+            Password: "donateblood",
+            To: email1.value,
+            From: "jd.donateblood@gmail.com",
+            Subject: "OTP Verification from JD Donate Blood",
+            Body: "Hi " + name1.value + ", Your OTP is " + number1,
+        }).then(function (message) {
+            alert("mail sent successfully")
+        });
+
+        // start
+
+        const verifyButton = document.getElementById('otpButton');
+        verifyButton.addEventListener('click', () => {
+            var enteredOtp = document.getElementById('otp');
+            console.log(enteredOtp)
+            if (number1 == enteredOtp.value) {
+                alert("Otp verified successfully!");
+                messageBox.disabled = false;
+                requestButton.disabled = false;
+
+            }
+            else {
+                alert("Enter a valid otp")
+            }
+        })
+
+            
+            
+
+        //end
+    });
+    var send = document.getElementById("submit1");
+    send.addEventListener("click", (e) => {
+            e.preventDefault();
+            const name = document.getElementById("name1");
+            const mobile = document.getElementById("mobile");
+            const msg = document.getElementById("msg");
+            try {
+                Email.send({
+                    Host: "smtp.gmail.com",
+                    Username: "jd.donateblood@gmail.com",
+                    Password: "donateblood",
+                    To: emailid,
+                    From: "jd.donateblood@gmail.com",
+                    Subject: "Emergency!!!,Someone needs your help",
+                    Body: "Hi I'm " + name.value + ",\n" + msg.value + "\n Contact Number: " + mobile.value,
+                }).then(function (message) {
+                    alert("mail sent successfully")
+                });
+            } catch (err) {
+                console.log(err)
+            }
+
+        });
+
+    
+
+   
+</script>
+
+</html>
+
+
+//
+<!-- D24093EA1B32D27F2FCB00763F123617DC57
+// smtp.elasticemail.com
+// 2525 

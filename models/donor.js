@@ -5,8 +5,8 @@ const DonorSchema = new Schema({
     name:{
         type: String,
     },
-    password:{
-        type:String,
+    email:{
+        type: String,
     },
     gender : {
         type:String,
@@ -20,7 +20,10 @@ const DonorSchema = new Schema({
     status:{
         type:String,
     },
-    place:{
+    cities:{
+        type:String,
+    },
+    states:{
         type:String,
     }
 });
