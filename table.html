@@ -12,6 +12,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--Jquery-->
   <script src="https://kit.fontawesome.com/516af7147a.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="Donors.css" type="text/css">
+  <style>
+.img-fluid:hover
+{
+    transition: 1s;
+   transform: scale(1.05);
+   box-shadow: 4px 4px 10px rgb(170, 169, 169),-4px -4px 10px rgb(170, 166, 166);
+}
+  </style>
 </head>
 <body style="margin: 0;padding: 0;">
     <nav class="navbar navbar-expand-md bg-danger navbar-dark " >
@@ -34,125 +42,22 @@
           </div>
       </nav> <!--NAVBAR end-->
       <div class="container-fluid">
-        <h3 align="center">Red Blood cell compatibility Table</h3>
-        <table class="table table-bordered" align="center" cellpadding="4" cellspacing="1" bgcolor="#666666"style="text-align:center">
-            <tr bgcolor="#FFFFFF" >
-                <th>Recipient blood type</th>
-                <th colspan="8">Donor red blood cells</th>
-            </tr>
-            <tr>
-                <td style="width:136px; background:#EFEFEF">O-</td>
-                <td bgcolor="#FFFFFF">O-</td>
-                <td bgcolor="#FFFFFF"></td>
-                <td bgcolor="#FFFFFF"></td>
-                <td bgcolor="#FFFFFF"></td>
-                <td bgcolor="#FFFFFF"></td>
-                <td bgcolor="#FFFFFF"></td>
-                <td bgcolor="#FFFFFF"></td>
-                <td bgcolor="#FFFFFF"></td>
-            </tr>
-            <tr>
-                <td style="background:#EFEFEF">O+</td>
-                <td bgcolor="#FFFFFF">O-</td>
-                <td bgcolor="#FFFFFF">O+</td>
-                <td bgcolor="#FFFFFF"></td>
-                <td bgcolor="#FFFFFF"></td>
-                <td bgcolor="#FFFFFF"></td>
-                <td bgcolor="#FFFFFF"></td>
-                <td bgcolor="#FFFFFF"></td>
-                <td bgcolor="#FFFFFF"></td>
-            </tr>
-            <tr>
-                <td style="background:#EFEFEF">A-</td>
-                <td bgcolor="#FFFFFF">O-</td>
-                <td bgcolor="#FFFFFF"></td>
-                <td bgcolor="#FFFFFF">A-</td>
-                <td bgcolor="#FFFFFF"></td>
-                <td bgcolor="#FFFFFF"></td>
-                <td bgcolor="#FFFFFF"></td>
-                <td bgcolor="#FFFFFF"></td>
-                <td bgcolor="#FFFFFF"></td>
-            </tr>
-            <tr>
-                <td style="background:#EFEFEF">A+</td>
-                <td bgcolor="#FFFFFF">O-</td>
-                <td bgcolor="#FFFFFF">O+</td>
-                <td bgcolor="#FFFFFF">A-</td>
-                <td bgcolor="#FFFFFF">A+</td>
-                <td bgcolor="#FFFFFF"></td>
-                <td bgcolor="#FFFFFF"></td>
-                <td bgcolor="#FFFFFF"></td>
-                <td bgcolor="#FFFFFF"></td>
-            </tr>
-            <tr>
-                <td style="background:#EFEFEF">B-</td>
-                <td bgcolor="#FFFFFF">O-</td>
-                <td bgcolor="#FFFFFF"></td>
-                <td bgcolor="#FFFFFF"></td>
-                <td bgcolor="#FFFFFF"></td>
-                <td bgcolor="#FFFFFF">B-</td>
-                <td bgcolor="#FFFFFF"></td>
-                <td bgcolor="#FFFFFF"></td>
-                <td bgcolor="#FFFFFF"></td>
-            </tr>
-            <tr>
-                <td style="background:#EFEFEF">B+</td>
-                <td bgcolor="#FFFFFF">O-</td>
-                <td bgcolor="#FFFFFF">O+</td>
-                <td bgcolor="#FFFFFF"></td>
-                <td bgcolor="#FFFFFF"></td>
-                <td bgcolor="#FFFFFF">B-</td>
-                <td bgcolor="#FFFFFF">B+</td>
-                <td bgcolor="#FFFFFF"></td>
-                <td bgcolor="#FFFFFF"></td>
-            </tr>
-            <tr>
-                <td style="background:#EFEFEF">AB-</td>
-                <td bgcolor="#FFFFFF">O-</td>
-                <td bgcolor="#FFFFFF"></td>
-                <td bgcolor="#FFFFFF">A-</td>
-                <td bgcolor="#FFFFFF"></td>
-                <td bgcolor="#FFFFFF">B-</td>
-                <td bgcolor="#FFFFFF"></td>
-                <td bgcolor="#FFFFFF">AB-</td>
-                <td bgcolor="#FFFFFF"></td>
-            </tr>
-            <tr>
-                <td style="background:#EFEFEF">AB+</td>
-                <td bgcolor="#FFFFFF">O-</td>
-                <td bgcolor="#FFFFFF">O+</td>
-                <td bgcolor="#FFFFFF">A-</td>
-                <td bgcolor="#FFFFFF">A+</td>
-                <td bgcolor="#FFFFFF">B-</td>
-                <td bgcolor="#FFFFFF">B+</td>
-                <td bgcolor="#FFFFFF">AB-</td>
-                <td bgcolor="#FFFFFF">AB+</td>
-            </tr>
-        </table>
-        <br>
-        <h3 align="center">Plasma compatibility Table</h3>
-        
-        <table class="table table-bordered" border="0" align="center" cellpadding="4" cellspacing="1" bgcolor="#666666" >
-            <tr bgcolor="#FFFFFF" class="ubuntu-black-13-bold">
-                <th>Recipient blood type</th>
-                <th>Donor plasma must be:</th>
-            </tr>
-            <tr align="center">
-                <td style="background:#EFEFEF">AB</td>
-                <td colspan="4" bgcolor="#FFFFFF">AB</td>
-            </tr>
-            <tr align="center">
-                <td style="background:#EFEFEF">A</td>
-                <td colspan="4" bgcolor="#FFFFFF">A or AB</td>
-            </tr>
-            <tr align="center">
-                <td style="background:#EFEFEF">B</td>
-                <td colspan="4" bgcolor="#FFFFFF">B or AB</td>
-            </tr>
-            <tr align="center">
-                <td style="background:#EFEFEF">O</td>
-                <td colspan="4" bgcolor="#FFFFFF">O, A, B or AB</td>
-            </tr>
-        </table>
-      </div>
+          <br>
+          <br>
+          <div class="row">
+              <div class="col-md-6 col-lg-7 my-3" style="text-align:center; ">
+                <div class="image" >
+                    <img class="img-fluid " src="table1.png" alt="quotes" width="500px" >
+                </div>
+               
+              </div>
+              
+              <div class="col-md-6 col-lg-5 my-3" style="text-align:center" >
+                <div class="image" >
+                   
+                    <img class="img-fluid " src="table2.png" alt="quotes"  width="500px" >
+                </div>
+              </div>
+          </div>
+        </div>
 </body>
