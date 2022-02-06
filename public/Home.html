@@ -1,0 +1,192 @@
+<!Doctype html>
+
+<head>
+    <title>BloodDonor</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+
+    <link rel="icon" href="logo1.png" type="icon/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--Jquery-->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@450;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Home.css" type="text/css">
+    
+
+<body>
+    <!--NAVBAR start-->
+    <nav class="navbar navbar-expand-md bg-danger navbar-dark ">
+        <a class="navbar-brand " href="#"> <img src="logo1.png" alt="logo" style="width:40px; border-radius: 50%;">
+            DONATE BLOOD </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsenav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="collapsenav">
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <a class="nav-link" href="/Home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Donors.html">Donors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about.html">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--NAVBAR end-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-7 ">
+                <h2>Blood Donation</h2>
+                <p class="desc" style="font-weight:200">According to the World Health Organisation (WHO),
+                    voluntary non-remunerated blood donation is the surest approach to ensure sufficient supply of safe
+                    blood to
+                    meet national requirement of blood transfusion.Blood donation is the most important social service
+                    to humankind.
+                    by donating we can give others a life support. Blood donation at the
+                    right time can save millions of lifes all over the world every year.</p>
+
+                <div class="image">
+                    <img class="img-fluid " src="quote.png" alt="quotes"
+                        title="Tears of mother cannot save her child but your blood can" width="600px" height="600px">
+                </div>
+                <br>
+                <h4>Blood Donation Advice:</h4>
+                <ul>
+                    <li>Donation frequency should be Every 56 days from Donation. </li>
+                    <li>You must be in good health condition.</li>
+                    <li>You must weigh at least 50 KG</li>
+                    <li>You must be at least 16 years above to donate</li>
+                </ul>
+
+                <h4>Tips for the day of your donation:</h4>
+                <ul>
+                    <li>Drink an extra 1 litre of water (or other nonalcoholic drink) before donating blood.</li>
+                    <li>Eat a healthy meal, avoiding fatty foods like fries or ice cream.</li>
+                    <li>Don’t do any heavy lifting or vigorous exercise for the rest of the day</li>
+                    <li>Keep eating iron-rich foods.</li>
+                    <li>If you donate frequently, be sure to take multivitamins with iron to ensure you continue to
+                        replenish your iron
+                        stores before your next donation.</li>
+                </ul>
+                <br>
+                <div class="quotes">
+                    <p class="quote">"Sometimes money cannot save life but donated blood can".</p>
+                    <p class="quote">“Your droplets of blood may create an ocean of happiness.”</p>
+                </div>
+
+                <br>
+                
+            </div>
+            <div class="col-lg-5">
+                <br>
+                <br>
+               
+                <h4 class="desc1" style="color:red">Register
+                    to donate blood for needy in your city</h4>
+                <br>    
+                <div class="form-div">
+                    <form id="form1" action="">
+                        <h2 id="form-head">Register</h2>
+
+                        <div class="border">
+                            <input type="text" id="name" class="input" name="username" placeholder="Name" required>
+                        </div>
+                        <select class="border" name="gender" id="gender">
+                            <option value="" style="color: rgb(255, 255, 255) ;background-color: rgb(77, 77, 77);">
+                                Select your Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Trans">Transgender</option>
+                        </select>
+                        <div class="border">
+                            <input type="email" id="email" class="input" name="email" placeholder="Email" required>
+                        </div>
+                        
+                        <div class="border">
+                            <input type="number" id="Age" class="input" name="date" placeholder="Age" min="18" max="70"
+                                required>
+                        </div>
+
+                        <div class="border1">
+                            <input type="radio" id="active" name="status" value="active">
+                            <label id="active1" for="active">Active</label>
+                            <input type="radio" id="inactive" name="status" value="inactive">
+                            <label id="inactive2" for="inactive">Inactive</label>
+                        </div>
+                        <div class="border">
+                            <input list="blood-types" class="input" name="blood-type" id="blood-type"
+                                placeholder="Blood Type">
+                            <datalist id="blood-types">
+                                <option value="A+">
+                                <option value="A-">
+                                <option value="B+">
+                                <option value="B-">
+                                <option value="AB+">
+                                <option value="AB-">
+                                <option value="O+">
+                                <option value="O-">
+                                    <datalist>
+
+                        </div>
+                        <select class="border" name="state" id="states">
+                            <option value="" style="color: rgb(255, 255, 255) ;background-color: rgb(77, 77, 77);">
+                                Select your State</option>
+                        </select>
+                        <div>
+                        </div>
+                        <select class="border" name="city" id="cities">
+                            <option value="" style="color: rgb(255, 255, 255) ;background-color: rgb(77, 77, 77);">
+                                Select your city</option>
+                        </select>
+                        <div>
+                            <input type="submit" id="submit" name="register" value="SUBMIT" class="button">
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+       
+        <br>
+        <div class="row">
+            <div class="col-md-6 col-lg-7 my-3" style="text-align:center; ">
+                <h3>Red blood cells compatibility table</h3>
+                <br>
+                <div class="image">
+                    <img class="img-fluid " src="table1.png" alt="quotes" width="500px">
+                </div>
+    
+            </div>
+    
+            <div class="col-md-6 col-lg-5 my-3" style="text-align:center">
+                <h3>Plasma compatibility table</h3>
+                <br>
+                <div class="image">
+                    <img class="img-fluid " src="table2.png" alt="quotes" width="500px">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    
+    <!-- javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./browser-app.js"></script>
+</body>
+<script src="Country-state.js" type="text/javascript"></script>
+
+</html>
